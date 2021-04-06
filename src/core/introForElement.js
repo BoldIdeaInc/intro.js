@@ -183,7 +183,7 @@ export default function introForElement(targetElm, group) {
   this._introItems = introItems;
 
   //add overlay layer to the page
-  if (addOverlayLayer.call(this, targetElm)) {
+  if (addOverlayLayer.call(this, document.body)) {
     //then, start the show
     nextStep.call(this);
 
