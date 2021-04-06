@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/usablica/intro.js"
   },
-  "main": "intro.js",
+  "main": "dist/intro.js",
   "scripts": {
     "prettier": "prettier --write 'src/**/*'",
     "test": "npm run test:jest && npm run test:jshint",
@@ -61,7 +61,7 @@
     "node >=0.1.90"
   ],
   "files": [
-    "dist/*"
+    "dist"
   ],
   "license": "AGPL-3.0",
   "changelog": {
