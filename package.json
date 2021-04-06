@@ -24,6 +24,7 @@
     "test:jest": "jest ./tests --verbose",
     "test:jshint": "jshint ./src --verbose && jshint ./tests --verbose",
     "release": "./bin/release.sh || true",
+    "prepare": "npm run build",
     "build": "rollup -c",
     "build:watch": "rollup -c -w"
   },
@@ -60,10 +61,7 @@
     "node >=0.1.90"
   ],
   "files": [
-    "*.js",
-    "*.css",
-    "themes/*",
-    "minified/*"
+    "dist/*"
   ],
   "license": "AGPL-3.0",
   "changelog": {
@@ -77,5 +75,8 @@
       "performance": ":running_woman: Performance"
     },
     "cacheDir": ".changelog"
+  },
+  "dependencies": {
+    "rollup-plugin-copy": "^3.4.0"
   }
 }

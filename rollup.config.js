@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import filesize from 'rollup-plugin-filesize';
 import commonjs from 'rollup-plugin-commonjs';
 import progress from 'rollup-plugin-progress';
+import copy from 'rollup-plugin-copy';
 import json from '@rollup/plugin-json';
 import pkg from './package.json';
 import { terser } from 'rollup-plugin-terser';
@@ -113,7 +114,14 @@ export default [
       banner,
       name: 'introJs'
     },
-    plugins: jsPlugins
+    plugins: [
+      ...jsPlugins,
+      copy({
+        targets: [
+          {src: 'themes', dest: outputPath},
+        ]
+      })
+    ]
   },
   {
     input: `${inputPath}/index.js`,

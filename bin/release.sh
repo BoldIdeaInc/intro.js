@@ -44,7 +44,6 @@ npm test
 # it can be replaced with package.json "exports" once it's stable
 cp "./package.json" "$DIST_FOLDER"
 cp ./*.md "$DIST_FOLDER"
-cp -r "themes" "$DIST_FOLDER"
 
 pushd $DIST_FOLDER
 
