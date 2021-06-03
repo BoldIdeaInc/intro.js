@@ -16,6 +16,7 @@ import { version } from './package.json';
 const inputPath = './src'
 const outputPath = './dist';
 
+
 const banner = `/*!
  * Intro.js v${version}
  * https://github.com/usablica/intro.js
@@ -109,7 +110,7 @@ export default [
   {
     input: `${inputPath}/index.js`,
     output: {
-      file: `${outputPath}/${pkg.main}`,
+      file: pkg.main,
       format: 'umd',
       banner,
       name: 'introJs'
